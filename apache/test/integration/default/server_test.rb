@@ -11,10 +11,10 @@ end
 
 describe file('/var/www/html/index.html') do
   it { should exist }
-  its(:content) { should contain 'Hello, world'}
+  its(:content) { should match 'Hello, world'}
 end
 
 describe upstart_service('apache2') do
-  it { should be_listening }
+  it { should be_running }
   it { should be_enabled }
 end

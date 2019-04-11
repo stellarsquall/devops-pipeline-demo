@@ -4,6 +4,8 @@
 #
 # Copyright:: 2019, The Authors, All Rights Reserved.
 
+apt_update 'update'
+
 package 'apache2'
 
 template '/var/www/html/index.html' do
